@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Амтат солонгос хоолнуудыг танилцуулах блог">
+    <title>Солонгос Хоолны Блог</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/icon.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <h1>Солонгос Хоолны Блогт Тавтай Морил</h1>
+            <p>Солонгос хоолны ертөнцийг судлаарай</p>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Нүүр</a></li>
+                <li><a href="about.html">Тухай</a></li>
+                <li><a href="recipes.html">Жор</a></li>
+                <li><a href="blog.html">Блог</a></li>
+                <li><a href="gallery.html">Галерей</a></li>
+                <li><a href="contact.html">Холбоо барих</a></li>
+                <li><a href="login.html">Нэвтрэх</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>Солонгосын шилдэг хоолнуудыг нээж үзээрэй</h2>
+            <p>Бибимбапаас Кимчи хүртэл, жорууд, түүхүүд болон бусдыг олоорой!</p>
+            <img src="images/food-banner.jpg" alt="Амтат солонгос хоолнууд">
+        </section>
+
+        <section class="features">
+            <h2>Алдартай Ангиллууд</h2>
+            <div class="categories">
+                <div class="category">
+                    <h3><a href="bbq.html">Солонгос Шарсан Хоол</a></h3>
+                    <p>Жинхэнэ амтыг шингээсэн шарсан хоолнууд.</p>
+                </div>
+                <div class="category">
+                    <h3><a href="kimchi.html">Кимчи Хоолнууд</a></h3>
+                    <p>Даршилсан байцааны гайхамшгийг судлаарай.</p>
+                </div>
+                <div class="category">
+                    <h3><a href="noodles.html">Гоймон</a></h3>
+                    <p>Халуун ногоотой, амттай гоймонгийн жорууд.</p>
+                </div>
+                <div class="category">
+                    <h3><a href="desserts.html">Амттан</a></h3>
+                    <p>Солонгосын амттанг зооглоорой.</p>
+                </div>
+                <div class="category">
+                    <h3><a href="seafood.html">Далайн Хоол</a></h3>
+                    <p>Далайн амьтдаар хийсэн амтат хоолнууд.</p>
+                </div>
+                <div class="category">
+                    <h3><a href="vegan.html">Веган Хоолнууд</a></h3>
+                    <p>Эрүүл, цэвэр веган хоолнууд.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Солонгос Хоолны Блог | <a href="https://www.facebook.com/profile.php?id=100033880793266"><img src="images/facebook.svg.png" alt="facebook" style="height: 20px; width: 20px;">Facebook</p>
+        
+        <p>Өнөөдрийн огноо: <span id="currentDate"></span></p>
+    </footer>
+
+</body>
+</html>
+
+<script>
+    function updateDateTime() {
+        const now = new Date();
+        const date = now.toLocaleDateString();
+        const time = now.toLocaleTimeString();
+        document.getElementById('currentDate').textContent = `${date} - ${time}`;
+    }
+
+    setInterval(updateDateTime, 1000);
+
+    updateDateTime();
+
+    const bannerText = document.querySelector('.banner h1');
+    const text = "Солонгос Хоолны Блогт Тавтай Морил";
+    let index = 0;
+
+    function typeEffect() {
+        if (index < text.length) {
+            bannerText.textContent += text[index];
+            index++;
+            setTimeout(typeEffect, 100); 
+        }
+    }
+
+    bannerText.textContent = '';
+    typeEffect();
+</script>

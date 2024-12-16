@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Солонгос хоолны блогийн тухай">
+    <title>Тухай - Солонгос Хоолны Блог</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/icon.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <h1>Солонгос Хоолны Блогт Тавтай Морил</h1>
+            <p>Солонгос хоолны ертөнцийг судлаарай</p>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Нүүр</a></li>
+                <li><a href="about.html">Тухай</a></li>
+                <li><a href="recipes.html">Жор</a></li>
+                <li><a href="blog.html">Блог</a></li>
+                <li><a href="gallery.html">Галерей</a></li>
+                <li><a href="contact.html">Холбоо барих</a></li>
+                <li><a href="login.html">Нэвтрэх</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about">
+            <h2>Бидний тухай</h2>
+            <p>Солонгос Хоолны Блог нь амттай, олон төрлийн солонгос хоолнуудыг танилцуулах зорилготой. Бид жор, түүх болон хоолны соёлын талаар мэдлэгийг хуваалцаж, хүн бүрт Солонгос хоолыг илүү ойртуулахыг хүсдэг.</p>
+            <p>Та энэ блогоос уламжлалт болон орчин үеийн хоолны жорууд, түүхүүд, болон зурагнуудыг олох боломжтой. Бидэнтэй хамт Солонгосын хоолны ертөнцийг судлаарай!</p>
+        </section>
+
+        <section class="team">
+            <h2>Манай Баг</h2>
+            <div class="team-members">
+                <div class="member">
+                    <img src="images/member1.jpg" alt="Багийн гишүүн 1">
+                    <h3>Анхбаяр</h3>
+                    <p>Солонгос хоолны мэргэжилтэн</p>
+                </div>
+                <div class="member">
+                    <img src="images/member2.jpg" alt="Багийн гишүүн 2">
+                    <h3>Бат-Оргил</h3>
+                    <p>Жор судлаач</p>
+                </div>
+                <div class="member">
+                    <img src="images/member3.jpg" alt="Багийн гишүүн 3">
+                    <h3>Эрдэнэтөгс</h3>
+                    <p>Хоолны гэрэл зурагчин</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Солонгос Хоолны Блог | <a href="https://www.facebook.com/profile.php?id=100033880793266"><img src="images/facebook.svg.png" alt="facebook" style="height: 20px; width: 20px;">Facebook</p>
+    </footer>
+</body>
+</html>
+
+<script>
+    const bannerText = document.querySelector('.banner h1');
+    const text = "Солонгос Хоолны Блогт Тавтай Морил";
+    let index = 0;
+
+    function typeEffect() {
+        if (index < text.length) {
+            bannerText.textContent += text[index];
+            index++;
+            setTimeout(typeEffect, 100);
+        }
+    }
+
+    bannerText.textContent = '';
+    typeEffect();
+</script>

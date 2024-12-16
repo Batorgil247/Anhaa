@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Солонгос хоолны зурагнууд">
+    <title>Галерей - Солонгос Хоолны Блог</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/icon.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <h1>Солонгос Хоолны Галерей</h1>
+            <p>Амттай хоолны гайхалтай зурагнуудыг үзээрэй</p>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Нүүр</a></li>
+                <li><a href="about.html">Тухай</a></li>
+                <li><a href="recipes.html">Жор</a></li>
+                <li><a href="blog.html">Блог</a></li>
+                <li><a href="gallery.html">Галерей</a></li>
+                <li><a href="contact.html">Холбоо барих</a></li>
+                <li><a href="login.html">Нэвтрэх</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="gallery">
+            <h2>Галерей</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/bibimbap.jpg" alt="Бибимбап">
+                    <p>Бибимбап</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/kimchi.jpg" alt="Кимчи">
+                    <p>Кимчи</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/ttokbokki.webp" alt="Ттокбокки">
+                    <p>Ттокбокки</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/samgyeopsal.jpg" alt="Самгёпсаль">
+                    <p>Самгёпсаль</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/naengmyeon.jpg" alt="Наэнмён">
+                    <p>Наэнмён</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/seafood.jpg" alt="Далайн хоол">
+                    <p>Далайн хоол</p>
+                </div>
+            </div>
+
+            <h3>Видео Галерей</h3>
+            <div class="video-gallery">
+                <div class="video-item">
+                    <iframe src="https://www.youtube.com/embed/lqUtV6lT1n4" title="Bibimbap!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <p>Бибимбап хийх заавар</p>
+                </div>
+                <div class="video-item">
+                    <iframe src="https://www.youtube.com/embed/eTucCw1w6Ak" title="Traditional kimchi recipe (Tongbaechu-kimchi: 통배추김치)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <p>Кимчи хэрхэн хийх вэ?</p>
+                </div>
+                <div class="video-item">
+                    <iframe src="https://www.youtube.com/embed/AB9VEyEPkyM" title="HOW TO PREPARE SAMGYEOPSAL DINNER AT HOME | DIY SAMGYUPSAL" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <p>Самгёпсаль шарж идэх арга</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Солонгос Хоолны Блог | <a href="https://www.facebook.com/profile.php?id=100033880793266"><img src="images/facebook.svg.png" alt="facebook" style="height: 20px; width: 20px;">Facebook</p>
+        </footer>
+</body>
+</html>
+
+<script>
+    const bannerText = document.querySelector('.banner h1');
+    const text = "Солонгос Хоолны Блогт Тавтай Морил";
+    let index = 0;
+
+    function typeEffect() {
+        if (index < text.length) {
+            bannerText.textContent += text[index];
+            index++;
+            setTimeout(typeEffect, 100);
+        }
+    }
+
+    bannerText.textContent = '';
+    typeEffect();
+</script>

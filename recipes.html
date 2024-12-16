@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Солонгос хоолны жорууд">
+    <title>Жор - Солонгос Хоолны Блог</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/icon.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <h1>Солонгос Хоолны Жорууд</h1>
+            <p>Амтат солонгос хоолыг гэртээ туршиж үзээрэй</p>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Нүүр</a></li>
+                <li><a href="about.html">Тухай</a></li>
+                <li><a href="recipes.html">Жор</a></li>
+                <li><a href="blog.html">Блог</a></li>
+                <li><a href="gallery.html">Галерей</a></li>
+                <li><a href="contact.html">Холбоо барих</a></li>
+                <li><a href="login.html">Нэвтрэх</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="recipes">
+            <h2>Солонгос Хоолны Жорууд</h2>
+            <div class="recipe">
+                <h3>1. Бибимбап</h3>
+                <p>Олон төрлийн хүнсний ногоо, мах, өндөг зэргийг хольж хийсэн Солонгосын уламжлалт хоол.</p>
+                <p><strong>Орц:</strong> Будаа, хүнсний ногоо, шарсан мах, гочужанг (улаан чинжүүний паста).</p>
+            </div>
+            <div class="recipe">
+                <h3>2. Кимчи Жигэ</h3>
+                <p>Халуун ногоотой кимчигээр хийсэн шөл. Хүйтэн өдөр төгс тохирно.</p>
+                <p><strong>Орц:</strong> Кимчи, гахайн мах, тофу, гочужанг, гүнжидийн тос.</p>
+            </div>
+            <div class="recipe">
+                <h3>3. Ттокбокки</h3>
+                <p>Халуун ногоотой улаан соусанд чанасан цагаан будааны кекс (тток).</p>
+                <p><strong>Орц:</strong> Тток, гочужанг, элсэн чихэр, гүнжидийн үр.</p>
+            </div>
+            <div class="recipe">
+                <h3>4. Самгёпсаль</h3>
+                <p>Шарсан гахайн махыг төрөл бүрийн хачир, соустай хамт иддэг хоол.</p>
+                <p><strong>Орц:</strong> Гахайн мах, сармис, гүнжидийн тос, салатны навч.</p>
+            </div>
+            <div class="recipe">
+                <h3>5. Наэнмён</h3>
+                <p>Хүйтэн гоймонгийн хоол, халуун өдөр сэрүүцүүлэхэд тохиромжтой.</p>
+                <p><strong>Орц:</strong> Гоймон, гахайн мах, өндөг, хясааны шөл.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Солонгос Хоолны Блог | <a href="https://www.facebook.com/profile.php?id=100033880793266"><img src="images/facebook.svg.png" alt="facebook" style="height: 20px; width: 20px;">Facebook</p>
+        </footer>
+</body>
+</html>
+
+
+<script>
+    const bannerText = document.querySelector('.banner h1');
+    const text = "Солонгос Хоолны Блогт Тавтай Морил";
+    let index = 0;
+
+    function typeEffect() {
+        if (index < text.length) {
+            bannerText.textContent += text[index];
+            index++;
+            setTimeout(typeEffect, 100);
+        }
+    }
+
+    bannerText.textContent = '';
+    typeEffect();
+</script>

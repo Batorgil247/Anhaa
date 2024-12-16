@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Солонгос хоолны тухай сонирхолтой бичлэгүүд">
+    <title>Блог - Солонгос Хоолны Блог</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/icon.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <h1>Солонгос Хоолны Блог</h1>
+            <p>Солонгос хоолны соёл, түүх, тансаг амтыг судлаарай</p>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Нүүр</a></li>
+                <li><a href="about.html">Тухай</a></li>
+                <li><a href="recipes.html">Жор</a></li>
+                <li><a href="blog.html">Блог</a></li>
+                <li><a href="gallery.html">Галерей</a></li>
+                <li><a href="contact.html">Холбоо барих</a></li>
+                <li><a href="login.html">Нэвтрэх</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="blog">
+            <h2>Сонирхолтой Бичлэгүүд</h2>
+            <article class="post">
+                <h3>1. Кимчи - Даршилсан Байцааны Түүх</h3>
+                <p>Кимчи нь зөвхөн Солонгос хоол биш, харин соёлын өв юм. Кимчигийн гарал үүсэл, төрөл бүрийн жоруудыг эндээс уншаарай.</p>
+                <a href="kimchi-history.html" class="read-more">Дэлгэрэнгүй...</a>
+            </article>
+            <article class="post">
+                <h3>2. Солонгосын Шарсан Хоолны Соёл</h3>
+                <p>Солонгос шарсан хоолны түүх, соёл, амтыг олж мэдээрэй. Нийгэмд хэрхэн нөлөөлснийг эндээс уншаарай.</p>
+                <a href="bbq-culture.html" class="read-more">Дэлгэрэнгүй...</a>
+            </article>
+            <article class="post">
+                <h3>3. Будааны Нууц</h3>
+                <p>Солонгос хоолонд будаа ямар үүрэгтэйг олж мэдээрэй. Солонгос хүмүүсийн амьдралд будааны ач холбогдлыг эндээс уншаарай.</p>
+                <a href="rice-secrets.html" class="read-more">Дэлгэрэнгүй...</a>
+            </article>
+            <article class="post">
+                <h3>4. Наэнмён - Зуны Сэрүүн Амт</h3>
+                <p>Хүйтэн гоймонгийн гарал үүсэл, амт, олон төрлийг судлаарай.</p>
+                <a href="naengmyeon-story.html" class="read-more">Дэлгэрэнгүй...</a>
+            </article>
+            <article class="post">
+                <h3>5. Гүнжидийн Тосны Ид Шид</h3>
+                <p>Солонгос хоолны гол орц болох гүнжидийн тосны түүх, ашиг тусыг эндээс уншаарай.</p>
+                <a href="sesame-oil-magic.html" class="read-more">Дэлгэрэнгүй...</a>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Солонгос Хоолны Блог | <a href="https://www.facebook.com/profile.php?id=100033880793266"><img src="images/facebook.svg.png" alt="facebook" style="height: 20px; width: 20px;">Facebook</p>
+        </footer>
+</body>
+</html>
+
+<script>
+    const bannerText = document.querySelector('.banner h1');
+    const text = "Солонгос Хоолны Блогт Тавтай Морил";
+    let index = 0;
+
+    function typeEffect() {
+        if (index < text.length) {
+            bannerText.textContent += text[index];
+            index++;
+            setTimeout(typeEffect, 100);
+        }
+    }
+
+    bannerText.textContent = '';
+    typeEffect();
+</script>
